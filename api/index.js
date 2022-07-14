@@ -9,7 +9,7 @@ try {
     await mongoose.connect(process.env.MONGO);
     console.log("Connect mongodb")
   } catch (error) {
-    throw error
+    throw error;
   }
 };
 
@@ -19,6 +19,11 @@ mongoose.connection.on("disconnected",()=>{
 })
 mongoose.connection.on("connecter",()=>{
     console.log ("mongoDB connecte")
+})
+
+
+app.get("/",(req,res)=>{
+  res.send("Hello premier requette")
 })
 app.listen(8800, ()=>{
 connect()
