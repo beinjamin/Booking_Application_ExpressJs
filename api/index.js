@@ -14,8 +14,12 @@ try {
 };
 
 
-
-
+mongoose.connection.on("disconnected",()=>{
+    console.log ("mongoDB deconnexion")
+})
+mongoose.connection.on("connecter",()=>{
+    console.log ("mongoDB connecte")
+})
 app.listen(8800, ()=>{
 connect()
 console.log ("connexion backend")
