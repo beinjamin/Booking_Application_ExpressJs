@@ -17,14 +17,11 @@ try {
 mongoose.connection.on("disconnected",()=>{
     console.log ("mongoDB deconnexion")
 })
-mongoose.connection.on("connecter",()=>{
+mongoose.connection.on("connected",()=>{
     console.log ("mongoDB connecte")
 })
 
 
-app.get("/",(req,res)=>{
-  res.send("Hello premier requette")
-})
 app.listen(8800, ()=>{
 connect()
 console.log ("connexion backend")
