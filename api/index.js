@@ -18,6 +18,14 @@ try {
 mongoose.connection.on("disconnected",()=>{
     console.log ("mongoDB deconnexion")
 })
+
+//Middlewares
+app.use("/auth", authRoute);
+
+
+
+
+
 mongoose.connection.on("connected",()=>{
     console.log ("mongoDB connecte")
 })
