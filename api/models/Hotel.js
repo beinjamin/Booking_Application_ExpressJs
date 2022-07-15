@@ -5,31 +5,27 @@ const {Schema } = mongoose;
 const HotelSchema = new mongoosescema.Schema({
     name:{
         type: String,
-        require:true
+        require:true,
     },
     type:{
         type: String,
-        require:true
+        require:true,
 
     },
     city:{
         type: String,
-        require: true
+        require: true,
 
     },
     adress:{
         type: String,
-        require: true
+        require: true,
 
     },
-    adress:{
-        type: String,
-        require: true
-        
-    },
+   
     distance:{
         type: String,
-        require:true
+        require:true,
     },
     photos:{
         type: [String],
@@ -37,14 +33,15 @@ const HotelSchema = new mongoosescema.Schema({
     },
     desc:{
         type: String,
-        require: true
+        require: true,
 
     },
-  
+ 
+
     rating:{
         type: Number,
         min:0,
-        max:5
+        max:5,
     },
 
     rooms:{
@@ -52,7 +49,7 @@ const HotelSchema = new mongoosescema.Schema({
     },
     cheapestPrice:{
         type: Number,
-        required: true
+        required: true,
 
     },
     featured:{
