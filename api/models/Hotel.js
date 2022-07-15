@@ -67,7 +67,17 @@ const HotelSchema = new mongoosescema.Schema({
         min:0,
         max:5
     },
-    
-    
-    
-})
+    rooms:{
+        type: [String],
+    },
+    cheapestPrice:{
+        type: String,
+        required: true
+
+    },
+    featured:{
+        type: Boolean,
+        default: false,
+    },
+
+});
